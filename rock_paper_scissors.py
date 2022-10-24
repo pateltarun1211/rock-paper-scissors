@@ -1,4 +1,4 @@
-from pyexpat.errors import XML_ERROR_NO_ELEMENTS
+import time
 import random
 
 rpc = {
@@ -11,6 +11,8 @@ player_score = 0
 computer_score = 0
 draw_score = 0
 
+print('\n!!---Rock Paper Scissors---!!')
+print('!!---A Perry and Tarun Collab---!!\n')
 player_name = input("Enter your name player: ")
 print(player_name + ", WELCOME TO DIE!")
 
@@ -21,6 +23,43 @@ while True:
 
     if player_choice.lower().strip() == 'quit':
         break
+
+    print('----> Rock')
+    print("""
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+""")
+
+    time.sleep(.5)
+    print('----> Paper')
+    print("""
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    """)
+    
+    time.sleep(.5)
+    print('----> Scissors')
+    print("""
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    """)
+
+    time.sleep(.5)
+    print('----> Shoot')
+    time.sleep(.5)
+    print('\n')
 
     for key, value in rpc.items():
         if player_choice.lower().strip() == rpc[computer_choice]:
